@@ -1,0 +1,4 @@
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),lock=JSON.parse(fs.readFileSync(path.join(root,'package-lock.json')));const licenses=[];
+for(const [name,pkg] of Object.entries(lock.packages)){if(!name.startsWith('node_modules/'))continue;const dir=path.join(root,name);if(!fs.existsSync(path.join(dir,'package.json')))continue;const p=JSON.parse(fs.readFileSync(path.join(dir,'package.json')));licenses.push({name:p.name,version:p.version,license:p.license||pkg.license||'see package',repository:p.repository,dev:!!pkg.dev,files:fs.readdirSync(dir).filter(f=>/license|copying|notice/i.test(f))});}
+fs.mkdirSync(path.join(root,'verification'),{recursive:true});fs.writeFileSync(path.join(root,'verification/dependency-licenses.json'),JSON.stringify(licenses,null,2));console.log(licenses.length+' dependency licenses recorded.');

@@ -1,0 +1,28 @@
+* text=auto
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.pb binary
+*.png binary
+*.webp binary
+*.mp3 binary
+*.wav binary
+
+# Keep upstream code identifiable in GitHub language statistics and reviews.
+server/vendor/** linguist-vendored -whitespace
+server/vendor/ttl-live/src/gen/** linguist-generated
+server/vendor/ttl-live/dist/** linguist-generated
+server/vendor/ttl-live/LICENSE* -text

@@ -1,0 +1,14 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LIVE LOOP • Игра для OBS</title><link rel="stylesheet" href="/game.css"><script type="importmap">{"imports":{"three":"/vendor/three.js"}}</script></head><body>
+<canvas id="scene"></canvas><div id="vignette"></div><div id="cut-vignette"></div><div id="hud">
+ <header><div class="brand">LIVE<span>LOOP</span><i>RACING</i></div><div class="live-tag"><i></i><span id="round">РАУНД 1</span></div></header>
+ <div class="race-info"><div class="clock"><small id="phase">НАБОР</small><strong id="timer">00:20</strong></div><div class="race-meta"><b id="zone">ГОРОД</b><span id="lap">КРУГ 1</span><small id="count">0 / 1000</small></div><div class="join-pill"><span><b>Подпишись</b> чтобы участвовать</span><span class="like-hint">♥ <b>Лайкай</b> — ускоряйся +12%</span></div></div>
+ <div id="map-events" role="status" aria-live="polite"></div><div id="lastlap">ПОСЛЕДНИЙ КРУГ</div><div class="leaderboard" id="leaders"></div>
+ <div class="minimap"><b class="map-title">КАРТА ГОНКИ</b><canvas id="map" width="560" height="450"></canvas><small class="map-help">Точки — машины · значки — события</small></div>
+ <div id="center"><b id="center-main"></b><span id="center-sub"></span></div>
+ <div id="shot-title"></div><div id="follow-thanks" role="status" aria-live="polite" hidden><img id="thanks-avatar" alt=""><div><small>СПАСИБО ЗА ПОДПИСКУ!</small><b id="thanks-name"></b><span>Твоя машина готова к гонке</span></div></div>
+ <div class="watching"><img id="watch-avatar" alt=""><div><small id="watch-kind">В КАДРЕ</small><b id="watch-name">Стартовая решётка</b><div class="gas"><i id="gas-fill"></i></div></div><span id="speed">0</span><small>км/ч</small></div>
+ <div class="support-pills"><span>♥ Лайки <b>ускорение +12%</b></span><span>✦ Подписка <b>вход в гонку</b></span></div>
+ <aside id="gifts"><div class="gift-heading"><span>ПОДАРКИ МЕНЯЮТ ГОНКУ</span><small>До 5000 ◈</small></div><div id="gift-grid"><div id="gifts-left" class="gift-rail"></div><div id="gifts-right" class="gift-rail"></div></div></aside><div id="rules">7 минут · затем последний круг и финиш на линии</div>
+ <div id="results"><div class="result-head"><small>HALL OF FAME</small><h1>Гонка завершена</h1><p id="result-next"></p></div><div id="podium-cards"></div><div id="all-results"></div></div>
+ <div id="status"></div><button id="audio-start" aria-label="Включить звук">♪ Звук</button>
+</div><link rel="stylesheet" href="/layout-v3.css"><link rel="stylesheet" href="/layout-v6.css"><script type="module" src="/game.js"></script></body></html>

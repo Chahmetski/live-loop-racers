@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/nglmercer/tiktok-signer",
+  "revision": "886157c10350c7def971f782451462db72bc0007",
+  "localChanges": "Preserve user followStatus and gift streakable during protobuf normalization. Source and dist rebuilt with TypeScript."
+}

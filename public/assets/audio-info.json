@@ -1,0 +1,26 @@
+{
+  "original": true,
+  "title": "Live Loop Rush",
+  "bpm": 128,
+  "musicSeconds": 30,
+  "rate": 44100,
+  "stereo": true,
+  "effects": [
+    "engine",
+    "nitro",
+    "collision",
+    "oil",
+    "tires",
+    "shield",
+    "wave",
+    "lion",
+    "meteor",
+    "follow",
+    "like",
+    "join",
+    "overtake",
+    "finish",
+    "start",
+    "victory"
+  ]
+}

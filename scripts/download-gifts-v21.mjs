@@ -1,0 +1,6 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import {GIFTS} from '../shared/config.js';
+const html=fs.readFileSync('verification/gifts-source.html','utf8');
+const entries=[...html.matchAll(/<div class="gift"[^>]*>([\s\S]*?)<\/div>/g)].map(([,body])=>({name:body.match(/class="gift-name">([^<]+)/)?.[1],url:body.match(/src="(https:[^"]+)/)?.[1],coins:Number(body.match(/class="gift-price">(\d+)/)?.[1])}));
+const manifest=JSON.parse(fs.readFileSync('public/assets/media-sources.json','utf8'));manifest.giftSource='https://streamtoearn.io/ru/gifts';manifest.retrievedAt=new Date().toISOString();manifest.gifts=[];
+for(const g of GIFTS){const entry=entries.find(e=>e.name===g.aliases[0]&&e.coins===g.coins);if(!entry)throw Error('Gift absent: '+g.aliases[0]+' '+g.coins);const r=await fetch(entry.url);if(!r.ok)throw Error('Image HTTP '+r.status);const bytes=Buffer.from(await r.arrayBuffer());if(bytes.length<100)throw Error('Empty image');const file='public/assets/gifts/'+g.key+'.webp';fs.writeFileSync(file,bytes);manifest.gifts.push({key:g.key,name:entry.name,coins:entry.coins,file,url:entry.url,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});}
+fs.writeFileSync('public/assets/media-sources.json',JSON.stringify(manifest,null,2));console.log(manifest.gifts.map(g=>g.name+' '+g.coins).join('\n'));

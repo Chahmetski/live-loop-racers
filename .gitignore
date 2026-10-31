@@ -1,0 +1,38 @@
+node_modules/
+/data/
+/release/
+*.log
+
+# Local tools, historical copies and unrelated investigations
+/.tools/
+/archive/
+/audit-*/
+/php2shell-lab/
+/output/
+/_tmp_*
+*.tgz
+
+# One-off migration scripts tied to excluded local archives
+/scripts/benchmark-v5.js
+/scripts/fix-launcher.cjs
+/scripts/vendor-free-connector.cjs
+/scripts/verification-report.cjs
+
+# Generated QA captures, profiles and saved viewer data
+/verification/*
+!/verification/.gitkeep
+**/.test-dist/
+*.bak
+*.tmp
+*.cookies.txt
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

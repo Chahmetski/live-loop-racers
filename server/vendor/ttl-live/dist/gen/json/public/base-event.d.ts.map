@@ -1,0 +1,1 @@
+{"version":3,"file":"base-event.d.ts","sourceRoot":"","sources":["../../../../src/gen/json/public/base-event.ts"],"names":[],"mappings":"AAGA,MAAM,MAAM,SAAS,GAAG;IACtB,MAAM,EAAE,MAAM,CAAC;IACf,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,SAAS,CAAC,EAAE,OAAO,CAAC;CACrB,CAAC;AAEF,eAAO,MAAM,eAAe;;;;;;;;;;;;;;;;;;;;;CAuBlB,CAAC"}

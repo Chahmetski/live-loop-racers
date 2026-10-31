@@ -1,0 +1,10 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const folder='public/assets',images=JSON.parse(fs.readFileSync('verification/gift-image-candidates.json','utf8'));
+const wanted={rose:'Rose',heart:'Finger Heart',perfume:'Perfume',doughnut:'Doughnut',glasses:'Sunglasses',money:'Money Gun',galaxy:'Galaxy',sports:'Sports Car',lion:'Lion',universe:'TikTok Universe'};
+const manifest={giftSource:'https://streamtoearn.io/gifts',retrievedAt:new Date().toISOString(),gifts:[],music:[]};fs.mkdirSync(folder+'/gifts',{recursive:true});
+async function download(url,file){const r=await fetch(url);if(!r.ok)throw Error(r.status+' '+url);const buffer=Buffer.from(await r.arrayBuffer());if(buffer.length<100)throw Error('Empty media '+url);fs.writeFileSync(file,buffer);return {bytes:buffer.length,sha256:crypto.createHash('sha256').update(buffer).digest('hex')};}
+await Promise.all(Object.entries(wanted).map(async([key,name])=>{const image=images.find(x=>x.alt===name+' TikTok gift');if(!image)throw Error('Missing '+name);const file=folder+'/gifts/'+key+'.webp',info=await download(image.src,file);manifest.gifts.push({key,name,file,url:image.src,...info});}));
+const race=JSON.parse(fs.readFileSync('verification/music-links-race.json','utf8')),result=JSON.parse(fs.readFileSync('verification/music-links-result.json','utf8'));
+const tracks=[['music-race',race.links[0],'Hot Roadway [Remake]',160,race.page],['music-final',race.links[1],'Hot Roadway [Remake] — Climax',175,race.page],['music-results',result.links[0],'Racing Game Result Best',140,result.page]];
+for(const [key,url,title,bpm,page] of tracks){const file=folder+'/'+key+'.mp3',info=await download(url,file);manifest.music.push({key,title,author:'MintoDog',bpm,license:'CC0 1.0',licenseURL:'https://creativecommons.org/publicdomain/zero/1.0/',source:page,url,file,...info});}
+manifest.gifts.sort((a,b)=>Object.keys(wanted).indexOf(a.key)-Object.keys(wanted).indexOf(b.key));fs.writeFileSync(folder+'/media-sources.json',JSON.stringify(manifest,null,2));console.log('Downloaded 10 gift images and 3 CC0 racing tracks.');

@@ -1,0 +1,137 @@
+{
+  "giftSource": "https://streamtoearn.io/ru/gifts",
+  "retrievedAt": "2026-10-13T10:49:25.841Z",
+  "gifts": [
+    {
+      "key": "rose",
+      "name": "Rose",
+      "coins": 1,
+      "file": "public/assets/gifts/rose.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/eba3a9bb85c33e017f3648eaf88d7189~tplv-obj.webp",
+      "bytes": 4904,
+      "sha256": "6a93376be38ca1f34569ea6c6910a3dda10b26de6ff610927b43091b6b244cce"
+    },
+    {
+      "key": "icecream",
+      "name": "Ice Cream Cone",
+      "coins": 1,
+      "file": "public/assets/gifts/icecream.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/968820bc85e274713c795a6aef3f7c67~tplv-obj.webp",
+      "bytes": 2648,
+      "sha256": "b91006312b7d7f3c2f3c16cef9f83c123079d71ef6b5e6232fc3f514434c5522"
+    },
+    {
+      "key": "heart",
+      "name": "Finger Heart",
+      "coins": 5,
+      "file": "public/assets/gifts/heart.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a4c4dc437fd3a6632aba149769491f49.png~tplv-obj.webp",
+      "bytes": 4420,
+      "sha256": "4de7efeea48108a1651e984109df93d431c5b5b449658df0be35cc61c9437869"
+    },
+    {
+      "key": "doughnut",
+      "name": "Doughnut",
+      "coins": 30,
+      "file": "public/assets/gifts/doughnut.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4e7ad6bdf0a1d860c538f38026d4e812~tplv-obj.webp",
+      "bytes": 3686,
+      "sha256": "9fad2d8b794433be0d3cfb3b4bb0aa2b97ea86ff429ed4aa171007b9bfbcdf82"
+    },
+    {
+      "key": "cap",
+      "name": "Cap",
+      "coins": 99,
+      "file": "public/assets/gifts/cap.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6c2ab2da19249ea570a2ece5e3377f04~tplv-obj.webp",
+      "bytes": 4338,
+      "sha256": "292a4b5ffd23c5b11dba066758eb0ff086441d9d1805e90f01b11464fb3aa63f"
+    },
+    {
+      "key": "glasses",
+      "name": "Sunglasses",
+      "coins": 199,
+      "file": "public/assets/gifts/glasses.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/alisg/webcast-sg/08af67ab13a8053269bf539fd27f3873.png~tplv-obj.webp",
+      "bytes": 3310,
+      "sha256": "b72406ec7f9395901f69264f46283ebbbe1f1a807b1c8f1da553b9c798643298"
+    },
+    {
+      "key": "money",
+      "name": "Money Gun",
+      "coins": 500,
+      "file": "public/assets/gifts/money.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e0589e95a2b41970f0f30f6202f5fce6~tplv-obj.webp",
+      "bytes": 5160,
+      "sha256": "8818690442dd3a9b32a4620d4fe7ad6bd28f9260e6c6f0cca29084f278a8788c"
+    },
+    {
+      "key": "galaxy",
+      "name": "Galaxy",
+      "coins": 1000,
+      "file": "public/assets/gifts/galaxy.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/79a02148079526539f7599150da9fd28.png~tplv-obj.webp",
+      "bytes": 14334,
+      "sha256": "7990802c6f7170507cdda33c5c4a54af5662dd00ec8e17c46c84eb0c8f002486"
+    },
+    {
+      "key": "motorcycle",
+      "name": "Motorcycle",
+      "coins": 2988,
+      "file": "public/assets/gifts/motorcycle.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/alisg/webcast-sg/motor_icon_green.png~tplv-obj.webp",
+      "bytes": 9312,
+      "sha256": "2406372f6c5738fa2e8b63387444003ac29788add006adc9cef52e8c06910ff6"
+    },
+    {
+      "key": "diamond",
+      "name": "Diamond Gun",
+      "coins": 5000,
+      "file": "public/assets/gifts/diamond.webp",
+      "url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/651e705c26b704d03bc9c06d841808f1.png~tplv-obj.webp",
+      "bytes": 8992,
+      "sha256": "66f85db6b0319b650a91f2f2e3fa0f9f01b8fbea1328499e6bf6f61f84a40199"
+    }
+  ],
+  "music": [
+    {
+      "key": "music-race",
+      "title": "Hot Roadway [Remake]",
+      "author": "MintoDog",
+      "bpm": 160,
+      "license": "CC0 1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/hot-roadway-remake",
+      "url": "https://opengameart.org/sites/default/files/hot_roadway_remake_bpm160.mp3",
+      "file": "public/assets/music-race.mp3",
+      "bytes": 4802477,
+      "sha256": "3183bc8e71cb5c8b2bb3eb71c6dd19486fe262dbc268a3ddfa5d59b2e9a9afce"
+    },
+    {
+      "key": "music-final",
+      "title": "Hot Roadway [Remake] — Climax",
+      "author": "MintoDog",
+      "bpm": 175,
+      "license": "CC0 1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/hot-roadway-remake",
+      "url": "https://opengameart.org/sites/default/files/hot_roadway_climax_remake_bpm175.mp3",
+      "file": "public/assets/music-final.mp3",
+      "bytes": 4446176,
+      "sha256": "1314383bd2bbe8e5d1b2ed198c4aab0400d6856b7f5aff28534dd3e676ddef0c"
+    },
+    {
+      "key": "music-results",
+      "title": "Racing Game Result Best",
+      "author": "MintoDog",
+      "bpm": 140,
+      "license": "CC0 1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://opengameart.org/content/racing-game-result",
+      "url": "https://opengameart.org/sites/default/files/racing_game_result_best_bpm140.mp3",
+      "file": "public/assets/music-results.mp3",
+      "bytes": 2518334,
+      "sha256": "62b2d4943e6a83d09e768c08b9e99fb36d870cb92d6c5fb1422ed0a305a3c164"
+    }
+  ]
+}

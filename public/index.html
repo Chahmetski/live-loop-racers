@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>LIVE LOOP — гонка и админка</title>
+ <link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/site.css">
+</head>
+<body data-format="portrait">
+ <section id="left-tools" class="left-tools" aria-label="Участники, подарки и настройки"><div class="tools-heading"><span>УПРАВЛЕНИЕ ГОНКОЙ</span><b>Участники и настройки</b></div><iframe id="tools-frame" src="/panel?embedded=1" title="Участники, подарки, камеры, рейтинг и настройки"></iframe></section>
+ <main class="stage" aria-label="Гонка"><iframe id="game-frame" src="/game?embedded=1" title="LIVE LOOP — игра" allow="autoplay; fullscreen"></iframe></main>
+ <div class="page-controls"><button id="fullscreen" class="quiet" type="button">⛶ Полный экран</button><button id="admin-toggle" type="button" aria-controls="admin" aria-expanded="false">⚙ Админка</button></div>
+ <aside id="admin" class="admin" aria-label="Админка гонки" hidden>
+  <header class="admin-head"><div><span class="eyebrow">ПАНЕЛЬ СТРИМЕРА</span><h1>LIVE<span>LOOP</span></h1></div><button id="admin-close" class="close" type="button" aria-label="Закрыть админку">×</button></header>
+  <p class="intro">Запусти эфир TikTok, введи свой ник и подключись. Гонка уже открыта на этой странице.</p>
+  <form id="connect-form"><label for="account">Твой ник в TikTok</label><div class="account-field"><span>@</span><input id="account" name="account" type="text" maxlength="64" placeholder="например, yourname" autocomplete="off" required></div><div id="connection" class="connection" role="status" aria-live="polite">Подключаемся к локальной игре…</div><div class="buttons"><button id="connect-live" class="primary" type="submit">⚡ Подключить LIVE</button><button id="disconnect-live" type="button">Отключить</button></div></form>
+  <p id="error" class="error" role="alert" hidden></p>
+  <section><div class="section-head"><h2>Гонка</h2><span id="race-phase">Набор</span></div><div class="stats"><div><strong id="racers">0</strong><small>гонщиков</small></div><div><strong id="race-timer">—</strong><small>до смены этапа</small></div></div><div class="buttons"><button id="start-race" class="primary" type="button">▶ Начать гонку</button><button id="pause-race" type="button">Ⅱ Пауза</button></div><div class="switch-row"><label for="auto-rounds">Гонки запускаются сами</label><input id="auto-rounds" type="checkbox" role="switch"></div><button id="clear-test" class="wide" type="button">Убрать ботов и тестовых участников</button><p class="hint">Перед настоящим эфиром убери тестовых участников. Подписки и подарки добавляют зрителей в текущую гонку.</p></section>
+  <section><h2>Картинка и звук</h2><div class="select-row"><label for="format">Формат</label><select id="format"><option value="portrait">Вертикальный 9:16</option><option value="landscape">Горизонтальный 16:9</option></select></div><div class="select-row"><label for="quality">Качество</label><select id="quality"><option value="high">Высокое · Full HD</option><option value="medium">Среднее</option><option value="low">Низкое</option></select></div><button id="sound" class="wide" type="button">♪ Включить звук</button></section>
+  <section><div class="section-head"><h2>Проверить без эфира</h2><span class="test-tag">ТЕСТ</span></div><p class="hint">Добавь машины и проверь, как работают подарки.</p><div class="buttons"><button id="demo" type="button">＋ 12 машин</button><button id="test-rose" type="button">🌹 Тест розы</button></div></section>
+  <section><h2>Добавить в OBS</h2><p class="hint">В источниках выбери «Браузер» и вставь этот адрес:</p><div class="obs-field"><input id="obs-url" type="text" readonly aria-label="Адрес для OBS"><button id="copy-obs" type="button">Копировать</button></div><p id="obs-size" class="hint">Размер источника: 1080 × 1920.</p></section>
+  <footer><span id="local-status">● Соединяемся с игрой</span><small>A — админка · Esc — закрыть</small></footer>
+ </aside>
+ <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+ <script type="module" src="/site.js"></script>
+</body>
+</html>
